@@ -1,4 +1,5 @@
-# Squirtle's Command and Control nerve center. List clients, hashes, status, etc. 
+
+tin# Squirtle's Command and Control nerve center. List clients, hashes, status, etc. 
 #
 # Copyright (C) 2008  Kurt Grutzmacher
 #
@@ -21,7 +22,7 @@ class ControllerServlet < HTTPServlet::AbstractServlet
 		HTTPAuth.basic_auth(req, resp, "Squirtle Realm") {|user, pass|
       # this block returns true if
       # authentication token is valid
-      user == $config['user'] && pass == $config['pass']
+      user == $config['user'] && pass == $config['pass]
     }
 
 		path = req.unparsed_uri
